@@ -1,0 +1,491 @@
+@import "color-scheme.css";
+@import "typography.css";
+
+#body {
+    background-color: var(--color-primary);
+}
+
+
+/*****************************/
+/* TOP NAV STYLES */
+#top-nav {
+    background-color: var(--color-nav);
+    z-index: 3;
+    position: sticky;
+    top: -1px;
+    left: 0;
+    font-size: 14px;
+    font-family: var(--font-family-main);
+    box-shadow: 0 0 10px 1px #000000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo {
+    color: var(--color-secondary);
+}
+
+#dropdown {
+    background-color: var(--color-nav);
+    align-content: center;
+}
+
+#dropdown a, #dropdown {
+    justify-self: center;
+}
+
+#top-nav .top-nav-link , #top-nav .navbar-brand{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#top-nav a:hover {
+    color: white;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.top-nav-link-inactive::after {
+    content: "";
+    border-radius: 12px;
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: width 0.4s ease-in-out;
+}
+
+.top-nav-link-inactive:hover::after {
+    width: 100%;
+}
+
+.top-nav-link-active::after {
+    content: "";
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.top-nav-link-active {
+    color: white;
+}
+
+.btn-piece {
+    width: 20px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 6px 0;
+    border-radius: 12px;
+}
+
+#nav-dropdown-btn:hover {
+    .btn-piece {
+        background-color: white;
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.5);
+        transition: 0.5s;
+    }
+}
+
+.dropdown-close {
+    #btn-piece-one {
+        transition: 0.5s ease-in-out;
+    }
+
+    #btn-piece-two {
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.dropdown-open {
+    .btn-piece {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    #btn-piece-one {
+        transform: rotate(45deg);
+        position: fixed;
+        top: 23px;
+        right: 13px;
+        transition: 0.5s ease-in-out;
+    }
+
+    #btn-piece-two {
+        transform: rotate(-45deg);
+        transition: 0.5s ease-in-out;
+    }
+}
+
+
+/*****************************/
+/* BIO STYLES */
+
+#bio {
+    color: var(--color-primary-txt);
+    font-family: var(--font-family-main);
+
+    #img-container {
+        display: grid;
+
+        #img-div {
+            height: 280px;
+            width: 280px;
+            overflow: hidden;
+            box-shadow: 0 0 16px 4px rgba(239, 131, 84, 0.5);
+        }
+
+        #gio-img {
+            margin: -44px 0 0 0;
+        }
+    }
+
+    & h1 {
+        font-size: 60px;
+        font-family: var(--font-family-headers);
+        position: relative;
+        margin: 0;
+    }
+
+    #period {
+        color: var(--color-secondary);
+    }
+
+    & #socials {
+        & a {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin-right: 20px;
+        }
+
+        & svg {
+            width: 20px;
+            height: 20px;
+            align-self: center;
+        }
+    }
+
+    & p {
+        text-align: justify;
+    }
+}
+
+.skinny {
+    font-weight: lighter;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+
+/*****************************/
+/* RESUME PAGE STYLES ********/
+
+#resume-container {
+    color: var(--color-primary-txt);
+    font-family: var(--font-family-main);
+
+    & h1, & h2 {
+        font-family: var(--font-family-headers);
+    }
+
+    & h1 {
+        font-size: 55px;
+    }
+
+    & h6 {
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding-bottom: 8px;
+        border-bottom: solid 1px var(--color-secondary);
+    }
+
+    #skills {
+        & li {
+            background-color: var(--color-secondary);
+            color: black;
+            border: none;
+        }
+
+        & li:nth-of-type(2) {
+            border-left: solid 2px black;
+            border-right: solid 2px black;
+        }
+    }
+
+    #education {
+        color: var(--color-primary-txt);
+
+        & li {
+            list-style: square;
+        }
+    }
+
+    #experience {
+        & li {
+            list-style: square;
+        }
+
+        & p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+li {
+    padding-top: 10px;
+}
+
+.subtext {
+    color: var(--color-secondar-txt);
+}
+
+
+/*****************************/
+/* PROJECTS PAGE STYLES ******/
+
+#projects-container {
+    color: var(--color-primary-txt);
+    font-family: var(--font-family-main);
+
+    & h1, & h2 {
+        font-family: var(--font-family-headers);
+    }
+
+    #projects-section-title {
+        justify-self: end;
+        font-size: 55px;
+    }
+}
+
+.project-item {
+
+    & p {
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .img-con {
+        display: grid;
+        background-color: rgba(47, 49, 54, 0.5);
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px #181818;
+    }
+
+    & p:nth-of-type(2) {
+        border-top: solid 1px var(--color-secondary);
+        padding-top: 8px;
+    }
+
+    & ul {
+        list-style: square;
+    }
+}
+
+
+/*****************************/
+/* GUESTBOOK STYLES */
+
+#message-container,
+#guestbook {
+    color: white;
+    background-color: rgba(39, 39, 39, 0.5);
+    border: 1px solid #9b9b9b;
+    border-radius: 12px;
+    max-width: 1000px;
+    backdrop-filter: blur(2px);
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group input, .form-group textarea{
+    background-color: rgba(65, 65, 65, 0.75);
+    border: none;
+    border-bottom: solid 1px #9b9b9b;
+    border-radius: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    border: 1px solid #9b9b9b;
+    border-radius: 12px;
+}
+
+.form-group input:focus, .form-group textarea:focus{
+    box-shadow: 0 7px 4px -5px #B6D7B9;
+    border: none;
+    background-color: rgba(65, 65, 65, 0.75);
+    color: white;
+    font-size: 14px;
+}
+
+.form-group textarea:focus {
+    box-shadow: 0 0 4px 2px #B6D7B9;
+    background-color: rgba(65, 65, 65, 0.75);
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    background-color: rgba(77, 77, 77, 0.75);
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #8d8d8d;
+}
+
+#message-btn,
+#add-msg-btn {
+    background-color: #7e9180;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#message-btn:hover,
+#add-msg-btn:hover {
+    color: white;
+    background-color: #B6D7B9;
+    transition: 0.3s ease-in;
+}
+
+.form-group input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #7e9180 inset;
+    -webkit-text-fill-color: white;
+}
+
+.form-group input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px rgba(182, 215, 185, 0.45) inset;
+    -webkit-text-fill-color: #333;
+}
+
+.guestPost {
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(50, 59, 59, 0.85);
+    box-shadow: 0 0 20px 0 #00000096;
+}
+
+.dateAdded {
+    color: rgb(192, 192, 192);
+}
+
+#add-msg-btn {
+    font-size: 14px;
+    align-self: center;
+}
+
+#add-msg-icon {
+    vertical-align: text-bottom;
+}
+
+.btn-close {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+}
+
+#close-btn {
+    background-color: transparent;
+    border: none;
+}
+
+#close-btn-icon {
+    fill: rgba(255, 255, 255, 0.75);
+}
+
+#close-btn:hover {
+    #close-btn-icon {
+        fill: white;
+    }
+}
+
+
+/*****************************/
+/* MESSAGE SENT STYLES */
+
+#message-sent {
+    color: white;
+    background-color: rgba(124, 196, 159, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#message-sent #close-alert:hover {
+    color: #d9d9d9;
+}
+
+
+
+/* Reusable btn hover animation */
+
+.btnHoverAnimation {
+    font-size: 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.82);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 2;
+    font-weight: bold;
+    padding: 10px 20px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-secondary);
+        border-radius: 19px;
+        z-index: -2;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #f1653f;
+        transition: all .45s;
+        border-radius: 19px;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: #fff;
+        & svg {
+            fill: white;
+        }
+        &:before {
+            width: 100%;
+        }
+    }
+}
+
+.space {
+    height: 200px;
+}
+
+.half-space {
+    height: 100px;
+}
