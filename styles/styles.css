@@ -298,6 +298,18 @@ li {
 }
 
 
+
+
+/* Anchor links */
+
+#top,
+#projects,
+#resume {
+    height: 60px;
+    background-color: var(--color-primary);
+}
+
+
 /* Reusable btn hover animation */
 
 .btnHoverAnimation {
