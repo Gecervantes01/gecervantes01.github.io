@@ -237,11 +237,16 @@
         font-family: var(--font-family-headers);
     }
 
+    & h2 {
+        font-size: calc(30px + .3vw);
+    }
+
     & h1 {
         font-size: calc(30px + 1.6vw);
     }
 
     & h6 {
+        font-size: calc(20px + 0.1vw);
         font-weight: bold;
         letter-spacing: 1px;
         padding-bottom: 8px;
@@ -262,6 +267,7 @@
     }
 
     #education {
+        padding: 0;
         color: var(--color-primary-txt);
 
         & li {
@@ -270,6 +276,7 @@
     }
 
     #experience {
+        padding: 0;
         & li {
             list-style: square;
         }
