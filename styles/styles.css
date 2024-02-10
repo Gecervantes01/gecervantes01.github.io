@@ -144,7 +144,8 @@
     }
 
     & h1 {
-        font-size: 60px;
+        /*font-size: 60px;*/
+        font-size: calc(40px + 1.6vw);
         font-family: var(--font-family-headers);
         position: relative;
         margin: 0;
@@ -184,6 +185,48 @@
 
 
 /*****************************/
+/* PROJECTS PAGE STYLES ******/
+
+#projects-container {
+    color: var(--color-primary-txt);
+    font-family: var(--font-family-main);
+
+    & h1, & h2 {
+        font-family: var(--font-family-headers);
+    }
+
+    #projects-section-title {
+        justify-self: end;
+        font-size: calc(30px + 1.6vw);
+    }
+}
+
+.project-item {
+
+    & p {
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .img-con {
+        display: grid;
+        background-color: rgba(47, 49, 54, 0.5);
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px #181818;
+    }
+
+    & p:nth-of-type(2) {
+        border-top: solid 1px var(--color-secondary);
+        padding-top: 8px;
+    }
+
+    & ul {
+        list-style: square;
+    }
+}
+
+
+/*****************************/
 /* RESUME PAGE STYLES ********/
 
 #resume-container {
@@ -195,7 +238,7 @@
     }
 
     & h1 {
-        font-size: 55px;
+        font-size: calc(30px + 1.6vw);
     }
 
     & h6 {
@@ -246,189 +289,6 @@ li {
 .subtext {
     color: var(--color-secondar-txt);
 }
-
-
-/*****************************/
-/* PROJECTS PAGE STYLES ******/
-
-#projects-container {
-    color: var(--color-primary-txt);
-    font-family: var(--font-family-main);
-
-    & h1, & h2 {
-        font-family: var(--font-family-headers);
-    }
-
-    #projects-section-title {
-        justify-self: end;
-        font-size: 55px;
-    }
-}
-
-.project-item {
-
-    & p {
-        text-align: justify;
-        font-size: 18px;
-    }
-
-    .img-con {
-        display: grid;
-        background-color: rgba(47, 49, 54, 0.5);
-        border-radius: 20px;
-        box-shadow: 0 0 20px 2px #181818;
-    }
-
-    & p:nth-of-type(2) {
-        border-top: solid 1px var(--color-secondary);
-        padding-top: 8px;
-    }
-
-    & ul {
-        list-style: square;
-    }
-}
-
-
-/*****************************/
-/* GUESTBOOK STYLES */
-
-#message-container,
-#guestbook {
-    color: white;
-    background-color: rgba(39, 39, 39, 0.5);
-    border: 1px solid #9b9b9b;
-    border-radius: 12px;
-    max-width: 1000px;
-    backdrop-filter: blur(2px);
-    font-family: 'Raleway', sans-serif;
-}
-
-.form-group textarea {
-    resize: none;
-}
-
-.form-group input, .form-group textarea{
-    background-color: rgba(65, 65, 65, 0.75);
-    border: none;
-    border-bottom: solid 1px #9b9b9b;
-    border-radius: 0;
-    color: white;
-    font-size: 14px;
-}
-
-.form-group textarea {
-    border: 1px solid #9b9b9b;
-    border-radius: 12px;
-}
-
-.form-group input:focus, .form-group textarea:focus{
-    box-shadow: 0 7px 4px -5px #B6D7B9;
-    border: none;
-    background-color: rgba(65, 65, 65, 0.75);
-    color: white;
-    font-size: 14px;
-}
-
-.form-group textarea:focus {
-    box-shadow: 0 0 4px 2px #B6D7B9;
-    background-color: rgba(65, 65, 65, 0.75);
-    border: none;
-    color: white;
-    border-radius: 12px;
-}
-
-.form-group input:hover,
-.form-group textarea:hover {
-    background-color: rgba(77, 77, 77, 0.75);
-}
-
-.form-group input::placeholder, .form-group textarea::placeholder {
-    color: #8d8d8d;
-}
-
-#message-btn,
-#add-msg-btn {
-    background-color: #7e9180;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-#message-btn:hover,
-#add-msg-btn:hover {
-    color: white;
-    background-color: #B6D7B9;
-    transition: 0.3s ease-in;
-}
-
-.form-group input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px #7e9180 inset;
-    -webkit-text-fill-color: white;
-}
-
-.form-group input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 50px rgba(182, 215, 185, 0.45) inset;
-    -webkit-text-fill-color: #333;
-}
-
-.guestPost {
-    border-radius: 8px;
-    padding: 20px;
-    background-color: rgba(50, 59, 59, 0.85);
-    box-shadow: 0 0 20px 0 #00000096;
-}
-
-.dateAdded {
-    color: rgb(192, 192, 192);
-}
-
-#add-msg-btn {
-    font-size: 14px;
-    align-self: center;
-}
-
-#add-msg-icon {
-    vertical-align: text-bottom;
-}
-
-.btn-close {
-    background-color: white;
-    width: 20px;
-    height: 20px;
-}
-
-#close-btn {
-    background-color: transparent;
-    border: none;
-}
-
-#close-btn-icon {
-    fill: rgba(255, 255, 255, 0.75);
-}
-
-#close-btn:hover {
-    #close-btn-icon {
-        fill: white;
-    }
-}
-
-
-/*****************************/
-/* MESSAGE SENT STYLES */
-
-#message-sent {
-    color: white;
-    background-color: rgba(124, 196, 159, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    width: 300px;
-    margin: 0 auto;
-}
-
-#message-sent #close-alert:hover {
-    color: #d9d9d9;
-}
-
 
 
 /* Reusable btn hover animation */
