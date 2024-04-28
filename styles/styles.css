@@ -9,14 +9,14 @@
 /*****************************/
 /* TOP NAV STYLES */
 #top-nav {
-    background-color: var(--color-nav);
+    /*background-color: var(--color-nav);*/
     z-index: 3;
     position: sticky;
-    top: -1px;
-    left: 0;
+    /*top: -1px;*/
+    /*left: 0;*/
     font-size: 14px;
     font-family: var(--font-family-main);
-    box-shadow: 0 0 10px 1px #000000;
+    /*box-shadow: 0 0 10px 1px #000000;*/
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
@@ -27,7 +27,7 @@
 }
 
 #dropdown {
-    background-color: var(--color-nav);
+    /*background-color: var(--color-nav);*/
     align-content: center;
 }
 
@@ -144,7 +144,6 @@
     }
 
     & h1 {
-        /*font-size: 60px;*/
         font-size: calc(40px + 1.6vw);
         font-family: var(--font-family-headers);
         position: relative;
@@ -172,6 +171,7 @@
 
     & p {
         text-align: justify;
+        text-justify: inter-character;
     }
 }
 
@@ -307,6 +307,22 @@ li {
 #resume {
     height: 60px;
     background-color: var(--color-primary);
+}
+
+footer {
+    color: var(--color-primary-txt);
+    background-color: #151517;
+    height: 200px;
+    .btm-nav-link {
+        text-decoration: none;
+    }
+    .btn-nav-link:after {
+        text-decoration: none;
+    }
+}
+
+footer div {
+    justify-items: center;
 }
 
 
