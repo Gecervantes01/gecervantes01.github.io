@@ -1,0 +1,68 @@
+main {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  row-gap: .25rem;
+  column-gap: 1.25rem;
+  position: fixed;
+
+  h1 {
+    font-weight: 600;
+    margin: 0;
+    font-size: 5rem;
+  }
+  p {
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.75rem;
+  }
+  #right-side {
+    align-content: center;
+  }
+}
+
+.char {
+  transition: all 0.15s ;
+}
+
+.char:hover {
+  cursor: default;
+  text-shadow: 0 0 4px #FFFFF3;
+  /* animation: animateName 20s; */
+}
+
+#profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: solid 1px rgb(255, 255, 255);
+  background-color: #063d44;
+}
+
+@media (width <= 768px) {
+  main {
+    text-align: center;
+    position: unset;
+    flex-direction: column;
+    align-self: center;
+    margin: 25% 0;
+    
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  #profile-pic {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  main {
+    padding-left: 10%;
+    top: 35%;
+  }
+}
