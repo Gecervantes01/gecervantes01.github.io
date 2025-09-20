@@ -7,7 +7,7 @@ function Footer() {
     return (
         <footer>
             <div id='footer-links'> 
-                <small>giovancervantes@yahoo.com</small>
+                <small>giovancervantes1@gmail.com</small>
                 <Stack direction="row" justifyContent="center">
                     <IconButton 
                     href='https://www.linkedin.com/in/gecervantes/'
@@ -24,7 +24,7 @@ function Footer() {
                         <GitHubIcon fontSize='medium'/>
                     </IconButton>
                 </Stack>
-                <small>Made by Giovan Cervantes</small>
+                <small>Made by me &lt;3</small>
             </div>
         </footer>
     )

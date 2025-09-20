@@ -1,9 +1,7 @@
-import '../styles/navbar-styles.css'
-
-function Navbar() {
+function DesktopNav() {
     return (
         <>
-            <nav id='navbar'>
+            <div id='navbar'>
                 <div id='logo'>
                     <p>&lt;</p>
                     <p>GC</p>
@@ -11,21 +9,18 @@ function Navbar() {
                 </div>
                 <section id='nav-links'>
                     <div className='nav-link'>
-                        <a>About</a>
+                        <a href='#about'>About</a>
                     </div>
                     <div className='nav-link'>
-                        <a>Projects</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    <div className='nav-link'>
+                        <a href='#resume'>Resume</a>
                     </div>
                 </section>
-            </nav>
-            <nav id='mobile-nav' >
-                <div id='hamburger-nav'>
-                    <div id='bar-one'/>
-                    <div id='bar-two'/>
-                </div>
-            </nav>
+            </div>
         </>
     )
 }
 
-export default Navbar
+export default DesktopNav

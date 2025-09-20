@@ -1,10 +1,19 @@
 #navbar {
-    background-color: transparent;
+    backdrop-filter: blur(2px);
     padding: 1rem;
-    display: flex;
     justify-content: space-between;
     color: #FFFFF3;
     z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    /* display: flex; */
+
+    a {
+        text-decoration: none;
+        color: #FFFFF3;
+    }
 }
 
 #nav-links {
@@ -49,22 +58,10 @@
 
     #hamburger-nav:hover {
         cursor: pointer;
-        #bar-one {
-            rotate: 45deg;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+        #bar-one,
         #bar-two {
-            rotate: -45deg;
-            position: absolute;
-            top: 0;
-            right: 0;
+            box-shadow: 0 0 4px 0 white;
         }
-    }
-
-    #hamburger-nav:active {
-
     }
 
     #bar-one,
@@ -72,19 +69,67 @@
         width: 1.5rem;
         height: 2px;
         background-color: white;
+        box-shadow: 1px 1px 4px 0 rgb(70, 70, 70);
+    }
+}
+
+#mobileNav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    list-style: none;
+    background-color: rgba(128, 128, 128, 0.25);
+    backdrop-filter: blur(10px);
+    margin-top: 2rem;
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+
+    a {
+        color: #FFFFF3;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
+
+    li:hover {
+        cursor: pointer;
+        text-shadow: 0 0 4px #FFFFF3;
     }
 }
 
 
-@media (width <= 768px) {
-    #navbar {
-        /* visibility: hidden; */
-        display: none;
+
+.menu-open {
+    #bar-one {
+        rotate: 45deg;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #bar-two {
+        rotate: -45deg;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
-@media (min-width: 769px) {
+#navbar, #mobile-nav {
+    display: none;
+}
+
+@media (max-width: 620px) {
     #mobile-nav {
-        display: none;
+        display: block;
+    }
+}
+
+@media (min-width: 621px) {
+    #navbar {
+        display: flex;
     }
 }

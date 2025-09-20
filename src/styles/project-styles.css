@@ -1,0 +1,44 @@
+.project-card {
+    display: flex;
+    column-gap: 1.5rem;
+    background-color: rgba(59, 59, 59, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    img {
+        min-width: 12rem;
+        height: 8rem;
+        border-radius: 0.75rem;
+        object-fit: contain;
+        /* background-color: rgba(59, 59, 59, 0.25);
+        backdrop-filter: blur(10px); */
+    }
+
+    img:hover {
+        cursor: pointer;
+        box-shadow: 0 0 4px #FFFFF3;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-weight: 600;
+    }
+
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: .75rem;
+        row-gap: .75rem;
+        
+        small {
+            font-weight: 100;
+            color: #d1d1d1;
+            background-color: #131212;
+            border: solid 1px #131212;
+            border-radius: 1rem;
+            padding: 0.25rem 0.5rem;
+        }
+    }
+}
